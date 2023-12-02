@@ -5,4 +5,4 @@ FROM nginx:alpine
 COPY aksdemo.html /usr/share/nginx/html/index.html
 
 # Expose port 80 for HTTP traffic
-EXPOSE 80
+EXPOSE 8045

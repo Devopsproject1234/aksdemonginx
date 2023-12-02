@@ -1,8 +1,8 @@
 # Use a minimal Nginx base image
-FROM nginx:alpine
+FROM nginx:latest
 
 # Copy the aksdemo.html file to the default Nginx HTML directory
 COPY aksdemo.html /usr/share/nginx/html/index.html
 
 # Expose port 80 for HTTP traffic
-EXPOSE 8045
+EXPOSE 80

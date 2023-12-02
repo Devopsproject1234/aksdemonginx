@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aks2demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aksdemonginx
+  template:
+    metadata:
+      labels:
+        app: aksdemonginx
+    spec:
+      containers:
+      - name: aksdemonginx
+        image: demoproject2aks.azurecr.io/aksdemonginx
+        ports:
+        - containerPort: 80

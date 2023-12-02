@@ -17,3 +17,16 @@ spec:
         image: demoproject2aks.azurecr.io/aksdemonginx
         ports:
         - containerPort: 80
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: my-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

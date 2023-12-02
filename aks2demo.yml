@@ -27,6 +27,5 @@ spec:
   selector:
     app: my-app
   ports:
-    - protocol: TCP
-      port: 8045
+      port: 80
       targetPort: 8045
